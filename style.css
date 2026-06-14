@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #ECECEC;
+}
+.menu {
+    position: absolute;
+    top: 100%; /* directly below header */
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    padding:10px 40px;
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+    background-color:black;
+    color: #7A71EB;
+    font-size: 30px;
+    list-style: none;
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.menu.show {
+    display: block;
+    max-height: 300px; /* larger than menu height */
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+
+
+.header{
+    position: relative;
+    width: 100%;
+    position: fixed;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #dcdbdb;
+    background-color:#ECECEC;
+}
+.header .img-drua{
+    width: 90px;
+}
+.header ul, button{
+    display: none;
+}
+.toggle-btn {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+    background: transparent;
+}
+.toggle-btn span {
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    border-radius: 2px;
+}
+/* end of the header section */
+
+
+.hero-section{
+    padding: 0 20px;
+    padding-top: 110px;
+}
+.div-imge img{
+    width: 100%;
+    margin: 70px 0;
+}
+.div-landing h1{
+    font-size: 42px;
+    letter-spacing: -2px;
+    line-height: 1.2;
+    font-family: "poppins" sans-serif;
+    font-weight: 750;
+}
+.div-landing span{
+    color: #7A71EB;
+}
+.div-landing p{
+    font-size: 20px;
+    line-height: 1.2;
+    margin: 16px 0;
+    margin-bottom: 30px;
+}
+.btns-preveiw{
+    display: flex;
+}
+.btn-learnMore{
+    color: #7A71EB;
+    border: 2px solid #7A71EB;
+    border-radius: 4px;
+    background-color: transparent;
+    padding: 16px 12px;
+    font-size: 16px;
+    margin-left: 2px;
+}
+.btn-preveiw{
+    display:none;
+    background-color:#7A71EB;
+    color: white;
+    padding: 16px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.btns-preveiw button{
+    display: block;
+}
+.container-moreThan h3{
+   font-size: 22px; 
+   line-height: 1.3;
+}
+.container-moreThan span{
+    color: #7A71EB;
+}
+.contaienr-logos{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 70px 0;
+}
+.contaienr-logos img{
+    width:100px;
+    padding: 4px 0;
+}
+.three-logos1{
+    display: flex;
+    flex-direction: column;
+}
+/* end of the hero section */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px){
+    .div-landing p{
+        padding-right: 290px;
+    }
+    .btn-preveiw{
+        margin-right: 20px;
+    }
+    .div-imge{
+        text-align: center;
+    }
+    .div-imge img{
+        width: 340px;
+    }
+    .container-moreThan{
+        text-align: center;
+    }
+    .contaienr-logos{
+        justify-content: space-evenly;
+    }
+    .three-logos1 img{
+        padding: 8px 0;
+    }
+    /* end of the hero section */
+}
+
+
+@media (min-width:1024px){
+    
+    .header{
+        height: 80px;
+        padding: 0 100px;
+        position:static;
+    }
+    .list-toggleBtn{
+        display: flex;
+        align-items: center;
+    }
+    .listAndBtn{
+        display: flex;
+    }
+    .header ul, button{
+        display: block;
+    }
+    .header button{
+        padding: 6px 12px;
+        background-color: #7A71EB;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .header ul{
+        display: flex;
+        margin-right: 18px;
+    }
+    .header ul li{
+        list-style: none;
+        font-size: 16px;
+        padding: 0 10px;
+    }
+    .toggle-btn{
+        display: none;
+    }
+    /* end of the header section  */
+
+    .hero-section{
+        text-align: center;
+        justify-items: center;
+        padding-top: 50px;
+    }
+    .container-landing{
+        justify-items: center;
+    }
+    .div-landing p{
+        padding-right:0;
+    }
+    .btn-preveiw{
+        justify-items: center;
+        margin-left: 190px;
+    }
+    /* end of the hero section  */
+}
